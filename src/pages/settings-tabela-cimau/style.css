@@ -1,0 +1,99 @@
+body {
+    background-image: var(--background-gradient-1);
+}
+
+.section-corpo {
+    background-color: var(--color-whiteish);
+
+    width: 80%;
+    padding: 20px;
+    height: auto;
+
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 10vh;
+
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+h1 {
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.div-lista {
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.td-item-acoes button {
+    border: none;
+    background-size: cover;
+
+    width: 24px;
+    height: 24px;
+
+    cursor: pointer;
+}
+
+.button-excluir-linha
+{
+    background-image: var(--icon-trashcan);
+}
+.button-subir-linha
+{
+    background-image: var(--icon-arrow-up);
+}
+.button-descer-linha
+{
+    background-image: var(--icon-arrow-down);
+}
+.button-editar-linha
+{
+    background-image: var(--icon-edit);
+}
+
+.table-itens {
+    border-collapse: collapse;
+}
+.table-itens td {
+    border: solid 1px black;
+    padding-left: 8px;
+}
+
+.td-item-id, .td-item-valor {
+    text-align: center;
+}
+
+.div-botao-adicionar {
+    display: flex;
+    
+    justify-content: space-around;
+}
+
+.td-item-acoes {
+    width: 15%;
+}
+.td-item-id {
+    width: 6%;
+}
+.td-item-tipo {
+    width: 24%;
+}
+.td-item-nome {
+    width: 40%;
+}
+.td-item-valor {
+    width: 20%;
+}
+
+.div-item-acoes {
+    display: flex;
+    
+    justify-content: space-between;
+}

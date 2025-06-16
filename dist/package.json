@@ -1,0 +1,19 @@
+{
+  "name": "health-plus",
+  "version": "1.0.0",
+  "description": "Extensão para auxiliar o trabalho no setor de agendamentos do Posto de Saúde de Seberi. Desenvolvido por Uziel Ferreira do Prado.",
+  "license": "ISC",
+  "author": "Uziel Ferreira do Prado",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts":
+  {
+      "clear": "rm -rf dist",
+      "compile": "npx tsc",
+      "copy-assets": "rsync -av --exclude 'tsconfig.json' --exclude 'src/**/*.ts' --exclude 'dist' ./ dist/",
+      "build": "npm run clear && npm run compile && npm run copy-assets"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.326"
+  }
+}
