@@ -10,7 +10,8 @@ function EstaNoPainelDeBeneficios() {
         return true;
     return false;
 }
-AdicionarEventHandlerAoBotaoAvancar();
+let LoopAtualizacaoValorTotal = null;
+MudarParaEntrada();
 function AdicionarEventHandlerAoBotaoAvancar() {
     if (EstaNoPainelDeBeneficios())
         return;
@@ -38,14 +39,29 @@ function AdicionarEventHandlerAoBotaoVoltar() {
     botaoVoltar.setAttribute("onclick", comandoPrimeFaces + ".then(() => {MudarParaEntrada();});return false;");
 }
 function MudarParaPainel() {
+    if (!EstaNoPainelDeBeneficios()) {
+        AdicionarEventHandlerAoBotaoAvancar();
+        return;
+    }
     AdicionarEventHandlerAoBotaoVoltar();
     CriarCampoValorTotal();
     IniciarLoop();
 }
 function MudarParaEntrada() {
     AdicionarEventHandlerAoBotaoAvancar();
-    document.getElementById("campoValorTotal").remove();
+    document.getElementById("campoValorTotal")?.remove();
     TerminarLoop();
+    CriarCampoAutorizacaoCIMAU();
+}
+// campo autorização cimau
+function CriarCampoAutorizacaoCIMAU() {
+    let campo = document.createElement("input");
+    campo.type = "text";
+    campo.id = "cimau_input";
+    campo.placeholder = "Nº Autorização CIMAU";
+    campo.addEventListener("input", evt => { document.getElementById("obs").value = `CIMAU - Autorização nº ${evt.target.value}`; });
+    document.getElementById("cabecalho").insertBefore(campo, document.getElementById("cabecalho").children[2]);
+    campo.select();
 }
 // VALOR TOTAL
 function ObterValorTotal() {
@@ -75,7 +91,6 @@ function CriarCampoValorTotal() {
     campoValorTotal.textContent = "R$ 0,00";
     botaoAdicionar.parentElement.insertBefore(campoValorTotal, botaoAdicionar);
 }
-let LoopAtualizacaoValorTotal = null;
 function IniciarLoop() {
     if (!EstaNoPainelDeBeneficios() || LoopAtualizacaoValorTotal !== null)
         return;

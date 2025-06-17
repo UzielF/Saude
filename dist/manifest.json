@@ -22,6 +22,14 @@
             "matches": ["https://rang.seberi.rs.gov.br/beneficioPaciente.xhtml"],
             "js": ["src/content_scripts/Rang/beneficioPaciente.xhtml.js"],
             "world": "MAIN"
+        },
+        {
+            "matches": ["http://cialtouruguai.com.br/municipio/atendimentoEletronico.php*"],
+            "js": ["src/content_scripts/Digifred/atendimentoEletronico.php.js"]
+        },
+        {
+            "matches": ["http://cialtouruguai.com.br/publico/relAutorizacaoAtendimento.php*"],
+            "js": ["src/content_scripts/Digifred/relAutorizacaoAtendimento.php.js"]
         }
     ]
 }
