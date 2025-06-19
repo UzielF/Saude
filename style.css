@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+
+    font: normal 12pt 'Times New Roman';
+}
+
+body {
+    margin: 0;
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.div-entradas {
+    display: flex;
+    gap: 20px;
+
+    justify-content: center;
+}
+@media print {
+    div, button {
+        display: none;
+    }
+    .div-saida {
+        display: flex;
+    }
+}
+.div-campanha-campos, .div-padrao-campos {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.td-campanha-visualizacao, .td-padrao-visualizacao {
+    border: solid 2px black;
+}
+.td-campanha-visualizacao div, .td-padrao-visualizacao div
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 7.5cm;
+    height: 3.9cm;
+}
+.td-campanha-visualizacao div div {
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.td-campanha-visualizacao div div span {
+    font-size: 16pt;
+}
+.td-campanha-visualizacao span, .td-padrao-visualizacao span
+{
+    font-size: 18.5pt;
+    line-height: 17.5pt;
+}
+
+.span-campanha-titulo, .span-campanha-data {
+    color: red;
+}
+.span-campanha-titulo, .span-campanha-data {
+    margin-top: 4px;
+}
+.span-campanha-titulo, .span-campanha-data, .span-campanha-secsaude, .span-padrao-secsaude, .span-rotulo {
+    font-weight: bold;
+    text-align: center;
+}
+.span-campanha-secsaude, .span-padrao-secsaude {
+    margin-top: auto;
+}
+.span-campanha-lote, .span-campanha-validade {
+    font-weight: normal;
+}
+
+.td-padrao-visualizacao .span-rotulo, .span-padrao-laboratorio {
+    margin-top: 8px;
+}
+
+.div-saida table {
+    border-spacing: 0;
+}
+.div-saida td {
+    border: solid 1px black;
+    margin: 0;
+    padding: 0;
+}
+.div-saida div {
+    display: flex;
+}
+.div-saida img {
+    margin: auto;
+    width: 2.5cm;
+}

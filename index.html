@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de tags</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="div-entradas">
+        <div>
+            <span>Tipo de tag:</span>
+            <select class="select-tipoDeTag">
+                <option value="campanha">Campanha</option>
+                <option value="padrao">Padrão</option>
+            </select>
+        </div>
+
+        <div class="div-campos">
+            <div class="div-campanha-campos">
+                <input type="text" placeholder="TÍTULO" class="input-campanha-titulo">
+                <input type="text" placeholder="DATA" class="input-campanha-data">
+                <input type="text" placeholder="LOTE" class="input-campanha-lote">
+                <input type="text" placeholder="VALIDADE" class="input-campanha-validade">
+                <input type="text" placeholder="LABORATÓRIO" class="input-campanha-laboratorio">
+            </div>
+            <div class="div-padrao-campos">
+                <input type="text" placeholder="DATA" class="input-padrao-data">
+                <input type="text" placeholder="LOTE" class="input-padrao-lote">
+                <input type="text" placeholder="LABORATÓRIO" class="input-padrao-laboratorio">
+            </div>
+        </div>
+
+        <div class="div-visualizacao">
+            <div class="div-campanha-visualizacao">
+                <table>
+                    <tr>
+                        <td class="td-campanha-visualizacao">
+                            <div>
+                                <span class="span-campanha-titulo"></span>
+                                <span class="span-campanha-data"></span>
+                                <div>
+                                    <span class="span-rotulo">Lote: <span class="span-campanha-lote"></span></span>
+                                    <span class="span-rotulo">Val: <span class="span-campanha-validade"></span></span>
+                                </div>
+                                <span class="span-campanha-laboratorio"></span>
+                                <span class="span-campanha-secsaude">SMS - SEBERI/RS</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="div-padrao-visualizacao">
+                <table>
+                    <tr>
+                        <td class="td-padrao-visualizacao">
+                            <div>
+                                <span class="span-rotulo">Data: <span class="span-padrao-data"></span></span>
+                                <span class="span-rotulo">Lote: <span class="span-padrao-lote"></span></span>
+                                <span class="span-padrao-laboratorio"></span>
+                                <span class="span-padrao-secsaude">SMS - SEBERI/RS</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <span>Modo de Impressão:</span>
+        <select class="select-modoDeImpressao">
+            <option value="tabela">Tabela</option>
+            <option value="etiqueta">Etiqueta</option>
+        </select>
+    </div>
+    <button class="button-gerar">Gerar</button>
+
+    <div class="div-saida"></div>
+
+    <script src="dom-to-image.min.js"></script>
+    <script src="DOM.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
