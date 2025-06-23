@@ -1,0 +1,71 @@
+.div-tabelaValores {
+    position: fixed;
+
+    right: 0;
+    top: 0;
+
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    transition: 0.4s ease-out;
+
+    box-sizing: border-box;
+}
+.div-tabelaValores * {
+    box-sizing: border-box;
+}
+.div-tabelaValores-escondida {
+    right: -400px
+}
+.div-tabelaValores .button-tabelaValores-toggle {
+    width: 40px;
+    height: 80px;
+
+    display: flex;
+
+    border: solid 1px black;
+    border-right: none;
+    background-color: #f2efeb;
+    border-radius: 20px 0 0 20px;
+}
+.div-tabelaValores .button-tabelaValores-toggle img {
+    width: 35px;
+    height: 75px;
+}
+
+.div-tabelaValores-conteudo {
+    width: 400px;
+
+    min-height: 112px;
+
+    border-radius: 16px 0 0 16px;
+    background-color: #f2efeb;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 8px;
+}
+
+.span-tabelaValores-titulo {
+    font-weight: bold;
+}
+
+.table-tabelaValores {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.table-tabelaValores td {
+    border: solid 1px black;
+
+    font-weight: bold;
+
+    padding: 4px;
+}
+.table-tabelaValores .td-tabelaValores-valor {
+    text-align: end;
+}

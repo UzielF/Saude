@@ -12,7 +12,8 @@
         "noUncheckedIndexedAccess": true,
         "strict": true,
         "noUncheckedSideEffectImports": true,
-        "rootDir": "./"
+        "rootDir": "./",
+        "moduleDetection": "force"
     },
     "include": ["src/**/*"],
     "exclude": ["node_modules","dist"]

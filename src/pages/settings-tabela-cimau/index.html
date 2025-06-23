@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/src/pages/common/css/common.css">
     <link rel="stylesheet" href="style.css">
 
-    <script src="/src/pages/common/js/common.js"></script>
+    <script src="/src/pages/common/DOMH.js" type="module"></script>
 </head>
 <body>
     <section class="section-corpo">
@@ -18,19 +18,26 @@
                 <thead>
                     <tr>
                         <th>Ações</th>
-                        <th>Id</th>
                         <th>Tipo</th>
                         <th>Nome</th>
-                        <th>Valor</th>
+                        <th>Código</th>
+                        <th>Clínica</th>
                     </tr>
                 </thead>
                 <tbody class="tbody-itens"></tbody>
             </table>
-            <div class="div-botao-adicionar">
-                <button class="button-adicionar-linha">Adicionar</button>
+            <div class="div-adicionar">
+                <select class="select-adicionar-tipoDeItem">
+                    <option value="profissional">Profissional</option>
+                    <option value="grupo">Grupo de Procedimentos</option>
+                </select>
+                <input type="text" placeholder="NOME" class="input-adicionar-nome">
+                <input type="text" placeholder="CÓDIGO" class="input-adicionar-codigo">
+                <input type="text" placeholder="CLÍNICA" class="input-adicionar-clinica">
+                <button class="button-adicionar">ADICIONAR</button>
             </div>
         </div>
     </section>
-    <script src="main.js"></script>
+    <script src="main.js" type="module"></script>
 </body>
 </html>

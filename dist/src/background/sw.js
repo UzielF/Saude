@@ -1,4 +1,3 @@
-"use strict";
 const EXTENSION_ID = chrome.i18n.getMessage("@@extension_id");
 chrome.action.onClicked.addListener(AbrirConfiguracoes);
 function AbrirConfiguracoes() {
@@ -7,3 +6,4 @@ function AbrirConfiguracoes() {
     };
     chrome.tabs.create(PROPRIEDADES);
 }
+export {};

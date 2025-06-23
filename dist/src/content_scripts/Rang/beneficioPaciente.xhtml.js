@@ -1,4 +1,3 @@
-"use strict";
 function EstaNoPainelDeBeneficios() {
     let secaoConcessaoDeBeneficios = document.getElementsByTagName("table")[3];
     if (secaoConcessaoDeBeneficios === undefined)
@@ -107,3 +106,4 @@ function AtualizarValorTotal() {
     let campo = document.getElementById("campoValorTotal");
     campo.textContent = ObterValorTotal();
 }
+export {};

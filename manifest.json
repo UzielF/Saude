@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
     "name": "Health Plus",
-    "version": "0.1.0",
-    "description": "Extensão para auxiliar o trabalho no setor de agendamentos do Posto de Saúde de Seberi. Desenvolvido por Uziel Ferreira do Prado.",
+    "version": "1.0.0",
+    "description": "Extensão para auxiliar o trabalho no Posto de Saúde de Seberi. Desenvolvido por Uziel Ferreira do Prado.",
     "icons":
     {
         "256": "assets/Images/Icons/icon-256.png"
@@ -26,6 +26,21 @@
         {
             "matches": ["http://cialtouruguai.com.br/municipio/atendimentoEletronico.php*"],
             "js": ["src/content_scripts/Digifred/atendimentoEletronico.php.js"]
+        },
+        {
+            "matches":
+            [
+                "http://cialtouruguai.com.br/municipio/atendimentoEletronico.php*",
+                "http://cialtouruguai.com.br/municipio/verificaAtendimento.php"
+            ],
+            "js":
+            [
+                "src/content_scripts/Digifred/TabelaValores.js",
+                "src/content_scripts/Digifred/conserto.js"
+            ],
+            "css": ["src/content_scripts/Digifred/TabelaValores.css"],
+            "run_at": "document_start",
+            "world": "MAIN"
         },
         {
             "matches": ["http://cialtouruguai.com.br/publico/relAutorizacaoAtendimento.php*"],
