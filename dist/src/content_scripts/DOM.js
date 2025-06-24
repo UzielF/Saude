@@ -1,3 +1,4 @@
+"use strict";
 const DOM = {
     ObterPelaClasse: function (classe) {
         let lista = document.getElementsByClassName(classe);
@@ -23,4 +24,3 @@ const DOM = {
         return elemento;
     }
 };
-export {};

@@ -1,3 +1,4 @@
+"use strict";
 var TipoDeEntrada;
 (function (TipoDeEntrada) {
     TipoDeEntrada[TipoDeEntrada["Profissional"] = 0] = "Profissional";
@@ -154,4 +155,3 @@ const TABELA_VALORES = {
     }
 };
 TABELA_VALORES.CarregarItens();
-export {};

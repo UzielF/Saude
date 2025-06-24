@@ -1,3 +1,4 @@
+"use strict";
 function MoverBotoesParaCima() {
     let botoes = document.getElementById("btnImprimir").parentElement;
     botoes.style.marginTop = "70px";
@@ -27,4 +28,3 @@ document.addEventListener("readystatechange", () => {
     MoverBotoesParaCima();
     AdicionarInformacoes();
 });
-export {};

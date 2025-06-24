@@ -1,3 +1,4 @@
+"use strict";
 function EstaNoPainelDeBeneficios() {
     let secaoConcessaoDeBeneficios = document.getElementsByTagName("table")[3];
     if (secaoConcessaoDeBeneficios === undefined)
@@ -10,7 +11,12 @@ function EstaNoPainelDeBeneficios() {
     return false;
 }
 let LoopAtualizacaoValorTotal = null;
-MudarParaEntrada();
+document.onreadystatechange = () => {
+    if (document.readyState !== "complete")
+        return;
+    MudarParaEntrada();
+    setTimeout(() => document.getElementById("cimau_input").select(), 120);
+};
 function AdicionarEventHandlerAoBotaoAvancar() {
     if (EstaNoPainelDeBeneficios())
         return;
@@ -60,7 +66,6 @@ function CriarCampoAutorizacaoCIMAU() {
     campo.placeholder = "Nº Autorização CIMAU";
     campo.addEventListener("input", evt => { document.getElementById("obs").value = `CIMAU - Autorização nº ${evt.target.value}`; });
     document.getElementById("cabecalho").insertBefore(campo, document.getElementById("cabecalho").children[2]);
-    campo.select();
 }
 // VALOR TOTAL
 function ObterValorTotal() {
@@ -106,4 +111,3 @@ function AtualizarValorTotal() {
     let campo = document.getElementById("campoValorTotal");
     campo.textContent = ObterValorTotal();
 }
-export {};

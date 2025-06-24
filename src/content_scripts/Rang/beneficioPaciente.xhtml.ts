@@ -12,7 +12,14 @@ function EstaNoPainelDeBeneficios(): boolean
 }
 
 let LoopAtualizacaoValorTotal: number | null = null;
-MudarParaEntrada();
+document.onreadystatechange = () =>
+{
+    if (document.readyState !== "complete") return;
+    MudarParaEntrada();
+
+    setTimeout(() => (<HTMLInputElement>document.getElementById("cimau_input")).select(), 120);
+    
+}
 
 function AdicionarEventHandlerAoBotaoAvancar(): void
 {
@@ -77,8 +84,6 @@ function CriarCampoAutorizacaoCIMAU(): void
     campo.addEventListener("input", evt => {(<HTMLTextAreaElement>document.getElementById( "obs" )!).value = `CIMAU - Autorização nº ${(<HTMLInputElement>evt!.target!).value}`;});
 
     document.getElementById( "cabecalho" )!.insertBefore( campo, document.getElementById( "cabecalho" )!.children[ 2 ]! );
-
-    campo.select();
 }
 
 

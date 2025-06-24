@@ -23,4 +23,4 @@ const DOMH = {
         return elemento;
     }
 };
-export {};
+export { DOMH };

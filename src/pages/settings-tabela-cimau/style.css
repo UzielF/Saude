@@ -30,3 +30,43 @@ h1 {
     flex-direction: column;
     gap: 20px;
 }
+
+.table-itens {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.table-itens td, .table-itens th {
+    border: solid 1px black;
+}
+
+.div-item-acoes {
+    display: flex;
+    justify-content: space-between;
+}
+.div-item-acoes button {
+    width: 24px;
+    height: 24px;
+
+    background-size: cover;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.button-item-apagar {
+    background-image: var(--icon-trashcan);
+}
+.button-item-subir {
+    background-image: var(--icon-arrow-up);
+}
+.button-item-descer {
+    background-image: var(--icon-arrow-down);
+}
+
+.td-item-tipo, .td-item-codigo, .td-item-clinica {
+    text-align: center;
+}
+.td-item-nome {
+    padding-left: 12px;
+}

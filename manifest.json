@@ -21,6 +21,7 @@
         {
             "matches": ["https://rang.seberi.rs.gov.br/beneficioPaciente.xhtml"],
             "js": ["src/content_scripts/Rang/beneficioPaciente.xhtml.js"],
+            "run_at": "document_start",
             "world": "MAIN"
         },
         {
@@ -35,16 +36,31 @@
             ],
             "js":
             [
-                "src/content_scripts/Digifred/TabelaValores.js",
-                "src/content_scripts/Digifred/conserto.js"
+                "src/content_scripts/DOM.js",
+                "src/content_scripts/Digifred/TabelaValores.js"
             ],
-            "css": ["src/content_scripts/Digifred/TabelaValores.css"],
+            "css": ["src/content_scripts/Digifred/TabelaValores.css"]
+        },
+        {
+            "matches":
+            [
+                "http://cialtouruguai.com.br/municipio/atendimentoEletronico.php*",
+                "http://cialtouruguai.com.br/municipio/verificaAtendimento.php"
+            ],
+            "js": ["src/content_scripts/Digifred/conserto.js"],
             "run_at": "document_start",
             "world": "MAIN"
         },
         {
             "matches": ["http://cialtouruguai.com.br/publico/relAutorizacaoAtendimento.php*"],
             "js": ["src/content_scripts/Digifred/relAutorizacaoAtendimento.php.js"]
+        }
+    ],
+    "web_accessible_resources":
+    [
+        {
+            "resources": ["assets/Images/**/*"],
+            "matches": ["http://cialtouruguai.com.br/*"]
         }
     ]
 }

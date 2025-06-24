@@ -1,3 +1,4 @@
+"use strict";
 document.onreadystatechange = () => {
     if (document.readyState === "interactive") {
         if (location.pathname === "/municipio/atendimentoEletronico.php") {
@@ -133,4 +134,3 @@ function excluirAutorizacaoNOVO(codigo) {
     var url = "atendimentoEletronico.php?atd=" + codigo + "&proc=&acao=cancelar";
     ConfirmaExclusao('Voc&ecirc; deseja excluir este atendimento?', url);
 }
-export {};

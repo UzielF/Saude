@@ -25,3 +25,5 @@ const DOMH = {
         return elemento;
     }
 };
+
+export {DOMH}

@@ -1,3 +1,4 @@
+"use strict";
 function CriarBotaoImprimir() {
     let numeroAtendimento = new URL(location.href).searchParams.get("atd");
     let atendimento = btoa(numeroAtendimento);
@@ -27,4 +28,3 @@ document.addEventListener("readystatechange", () => {
         && !urlAtendimento.searchParams.has("acao"))
         CriarBotaoImprimir();
 });
-export {};
