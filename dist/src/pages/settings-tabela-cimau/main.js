@@ -101,5 +101,22 @@ const CONF_TABELA_VALORES = {
         DOMH.ObterPelaClasse("tbody-itens")?.replaceChildren(...linhas);
     }
 };
+const CONF_NOME_COMPUTADOR = {
+    Nome: "",
+    Salvar() {
+        let input = DOMH.ObterPelaClasse("input-nomeComputador");
+        chrome.storage.local.set({ "NOME_COMPUTADOR": input.value });
+    },
+    Carregar() {
+        let input = DOMH.ObterPelaClasse("input-nomeComputador");
+        chrome.storage.local.get("NOME_COMPUTADOR").then(r => {
+            if (!r.hasOwnProperty("NOME_COMPUTADOR"))
+                return;
+            input.value = r["NOME_COMPUTADOR"];
+        });
+    }
+};
+CONF_NOME_COMPUTADOR.Carregar();
 CONF_TABELA_VALORES.CarregarSalvos();
 DOMH.ObterPelaClasse("button-adicionar").addEventListener("click", CONF_TABELA_VALORES.Adicionar);
+DOMH.ObterPelaClasse("button-nomeComputador").addEventListener("click", CONF_NOME_COMPUTADOR.Salvar);

@@ -9,8 +9,8 @@ function CriarBotaoImprimir() {
     botaoImprimir.addEventListener("click", () => {
         location.href = "http://cialtouruguai.com.br/publico/relAutorizacaoAtendimento.php?codigo=" + atendimento;
     });
-    let linhaTopo = document.getElementsByTagName("table")[2].children[0].children[0];
-    linhaTopo.children[0].appendChild(botaoImprimir);
+    let linhaTopo = document.getElementsByClassName("tabela")[2].children[0];
+    linhaTopo.children[0].children[0].appendChild(botaoImprimir);
 }
 function PreencherData() {
     let diaAtual = new Date().getDate().toString().padStart(2, "0");

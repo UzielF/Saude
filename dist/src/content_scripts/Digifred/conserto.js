@@ -24,7 +24,7 @@ document.onreadystatechange = () => {
 function RetornaClinicaNOVO() {
     var codProf = document.getElementById("edCodProf").value;
     var codCli = document.getElementById("edClinica").value;
-    if (parseInt(codCli) <= 0) {
+    if (isNaN(parseInt(codCli)) || parseInt(codCli) <= 0) {
         document.getElementById("edClinica").value = "";
         document.getElementById("edDescClinica").value = "";
     }

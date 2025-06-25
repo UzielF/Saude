@@ -22,12 +22,21 @@ function MoverBotoesParaCima()
 
 function AdicionarInformacoes()
 {
-    let linhaInformacoes = document.getElementsByTagName("table")[4]!.getElementsByTagName("td")[0]!;
+    chrome.storage.local.get("NOME_COMPUTADOR").then(r => 
+    {
+        let nome = "";
 
-    linhaInformacoes.textContent += " - Computador: 1";
-    linhaInformacoes.textContent += ` - UNIX: ${new Date().getTime()}`;
+        if (!r.hasOwnProperty("NOME_COMPUTADOR") || r["NOME_COMPUTADOR"] === "") nome = "NÃO IDENTIFICADO";
+        else nome = r["NOME_COMPUTADOR"];
 
-    linhaInformacoes.style.breakAfter = "page";
+        let linhaInformacoesA = document.getElementsByTagName("table")[4]!.getElementsByTagName("td")[0]!;
+        linhaInformacoesA.textContent += ` - Computador: ${nome}`;
+        linhaInformacoesA.textContent += ` - UNIX: ${new Date().getTime()}`;
+        linhaInformacoesA.style.breakAfter = "page";
+        let linhaInformacoesB = document.getElementsByTagName("table")[9]!.getElementsByTagName("td")[0]!;
+        linhaInformacoesB.textContent += ` - Computador: ${nome}`;
+        linhaInformacoesB.textContent += ` - UNIX: ${new Date().getTime()}`;
+    });
 }
 
 document.addEventListener("readystatechange", () => 
@@ -36,4 +45,8 @@ document.addEventListener("readystatechange", () =>
 
     MoverBotoesParaCima();
     AdicionarInformacoes();
+
+    document.body.children[7]!.remove();
+    let breaks = document.getElementsByTagName("br");
+    breaks[breaks.length-1]!.remove();
 });

@@ -39,7 +39,7 @@ function RetornaClinicaNOVO()
 {
     var codProf = (<HTMLInputElement>document.getElementById("edCodProf")!).value;
     var codCli = (<HTMLInputElement>document.getElementById("edClinica")!).value;
-    if (parseInt(codCli) <= 0)
+    if (isNaN(parseInt(codCli)) || parseInt(codCli) <= 0)
     {
         (<HTMLInputElement>document.getElementById("edClinica")!).value = "";
         (<HTMLInputElement>document.getElementById("edDescClinica")!).value = "";
