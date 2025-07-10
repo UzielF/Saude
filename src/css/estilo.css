@@ -8,4 +8,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    font: normal 12pt 'Times New Roman';
 }

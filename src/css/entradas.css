@@ -1,0 +1,84 @@
+.div-modal-adicionar {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #00000082;
+}
+.div-modal-adicionar-conteudo
+{
+    background-color: #f2efeb;
+    margin: auto;
+    width: 45%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+.div-modal-adicionar-cabecalho {
+    display: flex;
+    padding: 0 16px;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    background-color: #004aad;
+}
+.div-modal-adicionar-cabecalho-botoes {
+    display: flex;
+    gap: 12px;
+}
+.button-modal-adicionar-fechar,
+.button-modal-adicionar-limpar,
+.button-modal-adicionar-salvar {
+    padding: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    background-color: #f2efeb;
+}
+.button-modal-adicionar-fechar:hover,
+.button-modal-adicionar-limpar:hover, 
+.button-modal-adicionar-salvar:hover {
+    background-color: #545454;
+}
+
+.div-modal-adicionar-entrada {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.div-modal-adicionar-entrada-salvar {
+    align-items: center;
+}
+.button-modal-adicionar-salvar {
+    border: dashed 1px black;
+
+    margin-bottom: 12px;
+}
+
+.div-modal-adicionar-pagamento,
+.div-modal-adicionar-valores {
+    display: flex;
+    width: 100%;
+    gap: 24px;
+}
+.div-modal-adicionar-valorHospital, .div-modal-adicionar-valorMedico {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.input-modal-adicionar-valorHospital, .input-modal-adicionar-valorMedico {
+    width: 65px;
+}

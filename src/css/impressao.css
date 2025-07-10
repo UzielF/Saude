@@ -1,3 +1,5 @@
-.button-adicionar, .div-modal-adicionar {
-    display: none;
+@media print {
+    .button-adicionar, .div-modal-adicionar {
+        display: none;
+    }
 }
