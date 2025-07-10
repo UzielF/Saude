@@ -1,0 +1,27 @@
+{
+  "name": "caixa-diario",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "UzielF",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "clear": "rm -rf dist",
+    "compile": "npx tsc",
+    "copy-assets": "rsync -a --exclude 'src/**/*.ts' --exclude 'dist' --exclude '.git' --exclude 'node_modules' ./ dist/",
+    "start": "http-server ./dist/src/ -p 8080 -s -c-1",
+    "build": "npm run clear && npm run compile && npm run copy-assets && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UzielF/Saude.git"
+  },
+  "bugs": {
+    "url": "https://github.com/UzielF/Saude/issues"
+  },
+  "private": true,
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

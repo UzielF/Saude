@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "target": "es2022",
+        "verbatimModuleSyntax": true,
+        "allowJs": true,
+        "resolveJsonModule": true,
+        "moduleDetection": "force",
+
+        "strict": true,
+        "noUncheckedIndexedAccess": true,
+        "noImplicitAny": true,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "noUncheckedSideEffectImports": true,
+        "exactOptionalPropertyTypes": true,
+        
+        "moduleResolution": "nodenext",
+        "module": "nodenext",
+        "rootDir": "./",
+        "outDir": "dist",
+
+        "lib": ["ES2022", "DOM", "DOM.Iterable"]
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules","dist"]
+}
