@@ -68,17 +68,8 @@
     margin-bottom: 12px;
 }
 
-.div-modal-adicionar-pagamento,
-.div-modal-adicionar-valores {
-    display: flex;
+.div-modal-adicionar-pagamento {
+    display: none;
     width: 100%;
     gap: 24px;
-}
-.div-modal-adicionar-valorHospital, .div-modal-adicionar-valorMedico {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-.input-modal-adicionar-valorHospital, .input-modal-adicionar-valorMedico {
-    width: 65px;
 }

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa Diário</title>
+
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/tabela-adicionados.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/impressao.css">
+</head>
+<body>
+    <h1>Caixa Diário</h1>
+    <span class="span-hoje"></span>
+
+    <div class="div-tabela">
+        <button class="button-adicionar">Adicionar</button>
+    </div>
+
+    <div class="div-modal-adicionar">
+        <div class="div-modal-adicionar-conteudo">
+            <div class="div-modal-adicionar-cabecalho">
+                <h2>Adicionar pagamento</h2>
+
+                <div class="div-modal-adicionar-cabecalho-botoes">
+                    <button class="button-modal-adicionar-limpar">
+                        <span>Limpar</span>
+                    </button>
+                    <button class="button-modal-adicionar-fechar">
+                        <span>X</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="div-modal-adicionar-entrada">
+                <span>Paciente:</span>
+                <input type="text" class="input-modal-adicionar-paciente">
+            </div>
+            <div class="div-modal-adicionar-entrada div-modal-adicionar-entrada-medico">
+                <span>Médico:</span>
+            </div>
+            <div class="div-modal-adicionar-entrada div-modal-adicionar-entrada-procedimento">
+                <span>Procedimento:</span>
+                <select class="select-modal-adicionar-procedimento"></select>
+            </div>
+            <div class="div-modal-adicionar-entrada div-modal-adicionar-entrada-convenio">
+                <span>Convênio:</span>
+            </div>
+            <div class="div-modal-adicionar-entrada div-modal-adicionar-entrada-pagamento">
+                <span>Pagamento:</span>
+                <div class="div-modal-adicionar-pagamento div-modal-adicionar-pagamento-particularOuTarifa">
+                    <div class="div-modal-adicionar-pagamento-item">
+                        <span>Hospital:</span>
+                        <select class="select-modal-adicionar-pagamento-formaDePagamento-hospital">
+                            <option value="dinheiro">DINHEIRO</option>
+                            <option value="pix">PIX</option>
+                            <option value="cartao">CARTÃO</option>
+                        </select>
+                        <input type="text" class="input-modal-adicionar-pagamento-valor-hospital">
+                    </div>
+                    <div class="div-modal-adicionar-pagamento-item">
+                        <span>Médico:</span>
+                        <select class="select-modal-adicionar-pagamento-formaDePagamento-medico">
+                            <option value="dinheiro">DINHEIRO</option>
+                            <option value="pix">PIX</option>
+                            <option value="cartao">CARTÃO</option>
+                        </select>
+                        <input type="text" class="input-modal-adicionar-pagamento-valor-medico">
+                    </div>
+                    <div class="div-modal-adicionar-pagamento-item">
+                        <span>NFS-e:</span>
+                        <input type="text" class="input-modal-adicionar-pagamento-nfse">
+                    </div>
+                </div>
+                <div class="div-modal-adicionar-pagamento div-modal-adicionar-pagamento-cimau">
+                    <div class="div-modal-adicionar-pagamento-item">
+                        <span>Município:</span>
+                        <input type="text" class="input-modal-adicionar-pagamento-municipio">
+                    </div>
+                    <div class="div-modal-adicionar-pagamento-item">
+                        <span>Código:</span>
+                        <input type="text" class="input-modal-adicionar-pagamento-codigoCIMAU">
+                    </div>
+                </div>
+                <div class="div-modal-adicionar-pagamento div-modal-adicionar-pagamento-isento">
+                    <span>ISENTO</span>
+                </div>
+            </div>
+            <div class="div-modal-adicionar-entrada div-modal-adicionar-entrada-salvar">
+                <button class="button-modal-adicionar-salvar">
+                    <span>Salvar</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
