@@ -1,0 +1,75 @@
+.div-tabela {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    width: 700px;
+}
+
+.div-lista-item {
+    display: flex;
+    flex-direction: column;
+
+    border: solid 3px black;
+}
+
+.div-lista-item-cabecalho {
+    display: flex;
+    gap: 5px;
+}
+.div-lista-item-cabecalho-paciente,
+.div-lista-item-cabecalho-medico,
+.div-lista-item-cabecalho-procedimento,
+.div-lista-item-pagamento-convenio,
+.div-lista-item-pagamento-hospital,
+.div-lista-item-pagamento-medico,
+.div-lista-item-pagamento-nfse,
+.div-lista-item-pagamento-municipio,
+.div-lista-item-pagamento-codigoCIMAU {
+    display: flex;
+
+    padding: 4px;
+    padding-left: 12px;
+    align-items: center;
+}
+.div-lista-item-cabecalho-paciente {
+    width: 275px;
+}
+.div-lista-item-cabecalho-medico {
+    width: 140px;
+}
+.div-lista-item-cabecalho-procedimento {
+    width: 275px;
+}
+
+.div-lista-item-pagamento {
+    display: flex;
+    gap: 5px;
+}
+.div-lista-item-pagamento-convenio {
+    width: 140px;
+}
+
+.div-lista-item-pagamento-hospital {
+    width: 200px;
+
+    display: flex;
+    flex-direction: column;
+}
+.div-lista-item-pagamento-medico {
+    width: 200px;
+
+    display: flex;
+    flex-direction: column;
+}
+.div-lista-item-pagamento-nfse {
+    width: 140px;
+}
+
+.div-lista-item-pagamento-municipio {
+    width: 200px;
+}
+.div-lista-item-pagamento-codigoCIMAU {
+    width: 200px;
+}

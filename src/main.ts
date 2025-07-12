@@ -1,5 +1,6 @@
 import * as DOM from "./dom.js";
 import * as MODAL from "./modal.js";
+import * as LISTA from "./lista.js";
 
 const CAIXA =
     {
@@ -7,6 +8,7 @@ const CAIXA =
             DOM.ObterPelaClasse("span-hoje")!.textContent = new Date().toLocaleDateString();
             
             MODAL.Inicializar();
+            DOM.ObterPelaClasse("button-modal-adicionar-salvar")!.addEventListener("click", LISTA.Adicionar);
         }
     }
 

@@ -56,11 +56,11 @@ function Mostrar()
 {
     DOM.ObterPelaClasse("div-modal-adicionar")!.style.display = "flex";
 }
-function Esconder()
+export function Esconder()
 {
     DOM.ObterPelaClasse("div-modal-adicionar")!.style.display = "none";
 }
-function Limpar()
+export function Limpar()
 {
     (<HTMLInputElement>DOM.ObterPelaClasse("input-modal-adicionar-paciente")).value = "";
     (<HTMLSelectElement>DOM.ObterPelaClasse("select-modal-adicionar-medico")).value = Object.keys(MEDICOS)[0]!;
@@ -68,7 +68,10 @@ function Limpar()
     (<HTMLSelectElement>DOM.ObterPelaClasse("select-modal-adicionar-convenio")).value = CONVENIOS[0]!;
     MudarConvenio();
     (<HTMLSelectElement>DOM.ObterPelaClasse("select-modal-adicionar-pagamento-formaDePagamento-hospital")).value = "dinheiro";
+    (<HTMLInputElement>DOM.ObterPelaClasse("input-modal-adicionar-pagamento-valor-hospital")).value = "";
     (<HTMLSelectElement>DOM.ObterPelaClasse("select-modal-adicionar-pagamento-formaDePagamento-medico")).value = "dinheiro";
+    (<HTMLInputElement>DOM.ObterPelaClasse("input-modal-adicionar-pagamento-valor-medico")).value = "";
+    (<HTMLInputElement>DOM.ObterPelaClasse("input-modal-adicionar-pagamento-nfse")).value = "";
     (<HTMLSelectElement>DOM.ObterPelaClasse("input-modal-adicionar-pagamento-municipio")).value = "";
     (<HTMLSelectElement>DOM.ObterPelaClasse("input-modal-adicionar-pagamento-codigoCIMAU")).value = "";
 }
@@ -170,4 +173,71 @@ function FormatarValor(entrada: string): string
     let valores = entrada.match(/\d*[,.]?\d*/)![0].replace(".", ",").split(",");
 
     return `${valores[0]?.padStart(1, "0")},${valores[1] !== undefined ? valores[1].padEnd(2, "0") : "00"}`;
+}
+
+
+export function ObterPaciente(): string
+{
+    let input = <HTMLInputElement>DOM.ObterPelaClasse("input-modal-adicionar-paciente");
+    return input.value;
+}
+
+export function ObterMedico(): string
+{
+    let select = <HTMLSelectElement>DOM.ObterPelaClasse("select-modal-adicionar-medico");
+    return select.value;
+}
+
+export function ObterProcedimento(): string
+{
+    let select = <HTMLSelectElement>DOM.ObterPelaClasse("select-modal-adicionar-procedimento");
+    return select.value;
+}
+
+export function ObterConvenio(): string
+{
+    let select = <HTMLSelectElement>DOM.ObterPelaClasse("select-modal-adicionar-convenio");
+    return select.value;
+}
+
+export function ObterFormaDePagamentoHospital(): string
+{
+    let select = <HTMLSelectElement>DOM.ObterPelaClasse("select-modal-adicionar-pagamento-formaDePagamento-hospital");
+    let option = <HTMLOptionElement>select.children[select.selectedIndex];
+    return option.textContent!;
+}
+export function ObterValorHospital(): string
+{
+    let input = <HTMLInputElement>DOM.ObterPelaClasse("input-modal-adicionar-pagamento-valor-hospital");
+    return input.value;
+}
+
+export function ObterFormaDePagamentoMedico(): string
+{
+    let select = <HTMLSelectElement>DOM.ObterPelaClasse("select-modal-adicionar-pagamento-formaDePagamento-medico");
+    let option = <HTMLOptionElement>select.children[select.selectedIndex];
+    return option.textContent!;
+}
+export function ObterValorMedico(): string
+{
+    let input = <HTMLInputElement>DOM.ObterPelaClasse("input-modal-adicionar-pagamento-valor-medico");
+    return input.value;
+}
+
+export function ObterNFSe(): string
+{
+    let input = <HTMLInputElement>DOM.ObterPelaClasse("input-modal-adicionar-pagamento-nfse");
+    return input.value;
+}
+
+export function ObterMunicipio(): string
+{
+    let input = <HTMLInputElement>DOM.ObterPelaClasse("input-modal-adicionar-pagamento-municipio");
+    return input.value;
+}
+
+export function ObterCodigoCIMAU(): string
+{
+    let input = <HTMLInputElement>DOM.ObterPelaClasse("input-modal-adicionar-pagamento-codigoCIMAU");
+    return input.value;
 }
