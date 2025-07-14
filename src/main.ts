@@ -1,7 +1,3 @@
-import * as DOM from "./dom.js";
-import * as MODAL from "./modal.js";
-import * as LISTA from "./lista.js";
-
 const CAIXA =
     {
         Iniciar: () => {

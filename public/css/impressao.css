@@ -2,4 +2,8 @@
     .button-adicionar, .div-modal-adicionar {
         display: none;
     }
+
+    body {
+        gap: 4px;
+    }
 }

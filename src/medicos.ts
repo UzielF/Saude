@@ -1,11 +1,11 @@
-export interface IMedico
+interface IMedico
 {
     Nome: string;
     Apelido: string;
     Procedimentos: { [key: string]: string };
 }
 
-export const MEDICOS: { [key: string]: IMedico } =
+const MEDICOS: { [key: string]: IMedico } =
 {
     "roberto":
     {

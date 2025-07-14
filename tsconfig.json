@@ -5,8 +5,8 @@
         "target": "es2022",
         "verbatimModuleSyntax": true,
         "allowJs": true,
-        "resolveJsonModule": true,
-        "moduleDetection": "force",
+        // "resolveJsonModule": true,
+        "moduleDetection": "auto",
 
         "strict": true,
         "noUncheckedIndexedAccess": true,
@@ -18,13 +18,14 @@
         "noUncheckedSideEffectImports": true,
         "exactOptionalPropertyTypes": true,
         
-        "moduleResolution": "nodenext",
-        "module": "nodenext",
+        // "moduleResolution": "nodenext",
+        // "module": "nodenext",
+        "module": "none",
         "rootDir": "src",
         "outDir": "public/js",
 
         "lib": ["ES2022", "DOM", "DOM.Iterable"]
     },
     "include": ["src/**/*"],
-    "exclude": ["node_modules","dist"]
+    "exclude": ["node_modules","public/js"]
 }
