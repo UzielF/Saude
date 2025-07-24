@@ -12,3 +12,21 @@ body {
 
     font: normal 12pt 'Times New Roman';
 }
+
+.div-cabecalho {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.div-rodape {
+    display: flex;
+    justify-content: space-around;
+}
+
+.div-assinatura {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

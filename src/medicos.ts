@@ -16,6 +16,7 @@ const MEDICOS: { [key: string]: IMedico } =
             "us-abdomen-total": "US ABDOMEN TOTAL",
             "us-aparelho-urinario": "US APARELHO URINÁRIO",
             "us-prostata-abdominal": "US PRÓSTATA VIA ABDOMINAL",
+            "us-mamas": "US MAMAS"
         }
     },
     "hermes":
